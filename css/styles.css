@@ -349,7 +349,6 @@ body {
 @media (max-width: 600px) {
   body {
     align-items: flex-start;
-    padding-top: 5px; /* Reducimos de 30px a 10px (o 5px) para que suba más */
   }
 
   .options-grid {
