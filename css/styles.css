@@ -12,10 +12,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Cambiado a height fijo */
   padding: 15px; /* Reducido de 20px */
   background-image: radial-gradient(circle at center, #1e1b4b 0%, #020617 100%);
   overflow: hidden; /* Bloqueamos el scroll del body */
+  min-height: 100dvh;
 }
 
 .trivia-container {
@@ -344,20 +344,43 @@ body {
   box-shadow: 0 8px 25px rgba(59, 130, 246, 0.6);
 }
 
-/* Ajuste móvil para las instrucciones */
-
+/* Ajuste móvil unificado */
 @media (max-width: 600px) {
   body {
-    align-items: flex-start;
+    justify-content: flex-start; /* Alinea al inicio horizontal si es necesario */
+    align-items: flex-start; /* PEGA TODO ARRIBA */
+    padding: 10px; /* Espacio mínimo contra los bordes */
+    overflow-y: auto; /* Permite scroll si el contenido es largo */
   }
 
+  .trivia-container {
+    margin-top: 0;
+    padding: 15px;
+    border-radius: 16px; /* Bordes más sutiles en móvil */
+  }
+
+  /* Pantalla de Inicio: Reglas en una sola columna */
+  .rules-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  /* Pantalla de Trivia: Botones y texto */
   .options-grid {
     grid-template-columns: 1fr;
   }
-  .trivia-container {
-    padding: 15px;
+
+  .question-box {
+    padding: 25px 20px; /* Menos aire en la pregunta */
   }
+
   .question-box p {
     font-size: 1.1rem;
+  }
+
+  .option-btn {
+    padding: 12px 15px;
+    margin-bottom: 5px;
+    font-size: 0.95rem;
   }
 }
