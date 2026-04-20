@@ -316,13 +316,15 @@ body {
 }
 
 /* Ajuste móvil para las instrucciones */
+
 @media (max-width: 600px) {
-    .rules-grid {
-        grid-template-columns: 1fr; /* Una columna en teléfonos */
-        gap: 10px;
+    /* Mueve el contenido hacia arriba cambiando la alineación del body */
+    body {
+        align-items: flex-start; /* En lugar de centrar, lo pega arriba */
+        padding-top: 30px; /* Dale un pequeño margen superior para que no pegue al borde */
     }
-    .welcome-box h1 { font-size: 1.5rem; }
+
+    .options-grid { grid-template-columns: 1fr; }
+    .trivia-container { padding: 15px; }
+    .question-box p { font-size: 1.1rem; }
 }
-
-
-
