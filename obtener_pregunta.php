@@ -10,6 +10,7 @@ try {
     $stmtPregunta = $pdo->query($sqlPregunta);
     $pregunta = $stmtPregunta->fetch();
 
+
     if ($pregunta) {
         // 2. Obtener las opciones correspondientes a esa pregunta
         // Usamos parámetros preparados (:id) para mayor seguridad

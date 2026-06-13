@@ -3,19 +3,19 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Instrucciones - Trivia de Física</title>
+	<title>Instrucciones - Phistec</title>
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 	<div class="trivia-container intro-container">
 
 		<header class="trivia-header header-center">
-			<h2>Física</h2>
+			<h2>Phistec</h2>
 		</header>
 
 		<div class="welcome-box">
-			<h1>Protocolo de Evaluación</h1> 
-			<p>Bienvenido. Antes de iniciar el desafío, lee atentamente la dinámica del sistema:</p>
+			<h1>Formulas y despejes con valor numerico</h1> 
+			<p>Bienvenido. Antes de iniciar el desafío, lee atentamente la dinámica del juego:</p>
 		</div>
 
 		<div class="rules-grid">
@@ -41,7 +41,7 @@
 		</div>
 
 		<div class="action-section">
-			<a href="trivia.php" class="btn-start">Comenzar Desafío</a>
+			<a href="phistec.php" class="btn-start">Comenzar Desafío</a>
 		</div>
 
 	</div>

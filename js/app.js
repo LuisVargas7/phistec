@@ -1,15 +1,18 @@
 let preguntaActual = null;
 let puntuacion = 0;
 
+// Cargamos la pregunta apenas cargue la pagina.
 document.addEventListener('DOMContentLoaded', () => {
     cargarNuevaPregunta();
-    
+
     // Configurar el evento del botón continuar una sola vez
     document.getElementById('btn-continuar').onclick = () => {
         document.getElementById('trivia-feedback').classList.add('hidden');
         cargarNuevaPregunta();
     };
+
 });
+
 
 async function cargarNuevaPregunta() {
     try {
@@ -20,7 +23,7 @@ async function cargarNuevaPregunta() {
         if (data.success) {
             preguntaActual = data;
             
-            // Limpiamos el panel de feedback antes de mostrar la nueva pregunta
+            // Limpiamos el panel de alerta
             const feedbackPanel = document.getElementById('trivia-feedback');
             feedbackPanel.classList.add('hidden');
             feedbackPanel.className = "feedback-container hidden"; // Reseteamos colores
@@ -35,6 +38,7 @@ async function cargarNuevaPregunta() {
 }
 
 function mostrarPregunta(data) {
+
     const questionText = document.getElementById('question-text');
     const optionsGrid = document.querySelector('.options-grid');
 
@@ -51,9 +55,13 @@ function mostrarPregunta(data) {
         button.onclick = () => validarRespuesta(opcion, button);
         optionsGrid.appendChild(button);
     });
+
+    transcipcionEcuaciones();
 }
 
 function validarRespuesta(opcionSeleccionada, botonElemento) {
+
+    console.log(preguntaActual);
     // Bloquear otros clics
     const todosLosBotones = document.querySelectorAll('.option-btn');
     todosLosBotones.forEach(btn => btn.style.pointerEvents = 'none');
@@ -85,6 +93,7 @@ function validarRespuesta(opcionSeleccionada, botonElemento) {
 
     // Mostrar la alerta (quitando la clase hidden)
     feedbackPanel.classList.remove('hidden');
+    transcipcionEcuaciones();
 }
 
 function marcarCorrectaEnPantalla() {
@@ -95,5 +104,16 @@ function marcarCorrectaEnPantalla() {
         if (opcionData && opcionData.es_correcta) {
             btn.classList.add('correct');
         }
+    });
+}
+
+
+function transcipcionEcuaciones() {
+    renderMathInElement(document.body, {
+        delimiters: [
+            {left: '$$', right: '$$', display: true},  
+            {left: '$', right: '$', display: false}   
+        ],
+        throwOnError: false
     });
 }

@@ -1,4 +1,3 @@
-/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -12,9 +11,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15px; /* Reducido de 20px */
+  padding: 15px; 
   background-image: radial-gradient(circle at center, #1e1b4b 0%, #020617 100%);
-  overflow: hidden; /* Bloqueamos el scroll del body */
+  overflow-y: auto; 
   min-height: 100dvh;
 }
 
@@ -35,13 +34,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px; /* Reducido de 35px */
+  margin-bottom: 20px; 
   border-bottom: 1px solid #334155;
   padding-bottom: 10px;
 }
 
 .trivia-header h2 {
-  font-size: 0.9rem; /* Un poco más compacto */
+  font-size: 24px; 
   color: #22d3ee;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -57,14 +56,13 @@ body {
   border-radius: 20px;
 }
 
-/* Caja de la pregunta */
 .question-wrapper {
-  margin-bottom: 30px;
+  margin-bottom: 20px; 
 }
 
 .question-box {
   background: #0f172a;
-  padding: 40px 30px; /* Reducido de 40px 30px */
+  padding: 20px 25px; 
   border-radius: 20px;
   text-align: center;
   border: 1px solid #3b82f6;
@@ -83,17 +81,17 @@ body {
 }
 
 .question-box p {
-  font-size: 1.4rem; /* Reducido de 1.6rem */
+  font-size: 1.4rem; 
   font-weight: 500;
   line-height: 1.3;
   color: #f1f5f9;
 }
 
-/* Grilla de opciones */
+
 .options-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px; /* Reducido de 20px */
+  gap: 12px; 
 }
 
 .option-btn {
@@ -101,7 +99,7 @@ body {
   color: #cbd5e1;
   border: 1px solid #334155;
   border-radius: 16px;
-  padding: 14px 20px; /* Reducido de 20px 25px */
+  padding: 14px 20px; 
   font-size: 1rem;
   cursor: pointer;
   display: flex;
@@ -133,7 +131,6 @@ body {
   flex-shrink: 0;
 }
 
-/* ===== ANIMACIONES (SIN CAMBIOS) ===== */
 .option-btn.correct {
   background-color: #064e3b !important;
   border-color: #10b981 !important;
@@ -174,10 +171,9 @@ body {
   }
 }
 
-/* Alerta de Feedback (Compactada) */
 .feedback-container {
-  margin-top: 15px; /* Reducido de 30px */
-  padding: 15px; /* Reducido de 25px */
+  margin-top: 15px; 
+  padding: 15px; 
   border-radius: 16px;
   text-align: center;
   border: 1px solid transparent;
@@ -213,14 +209,14 @@ body {
 
 #feedback-message {
   font-size: 1rem;
-  margin-bottom: 12px; /* Reducido de 20px */
+  margin-bottom: 12px; 
 }
 
 .btn-next {
   background: linear-gradient(90deg, #06b6d4, #3b82f6);
   color: white;
   border: none;
-  padding: 10px 30px; /* Reducido de 12px 40px */
+  padding: 10px 30px; 
   font-weight: 700;
   border-radius: 10px;
   cursor: pointer;
@@ -240,12 +236,8 @@ body {
   }
 }
 
-/* =========================================
-   ESTILOS PARA LA PANTALLA DE INSTRUCCIONES
-   ========================================= */
-
 .intro-container {
-  justify-content: space-between; /* Distribuye el espacio uniformemente */
+  justify-content: space-between; 
 }
 
 .header-center {
@@ -271,7 +263,6 @@ body {
   line-height: 1.4;
 }
 
-/* Grilla de reglas (Compacta para evitar scroll) */
 .rules-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -315,13 +306,12 @@ body {
 }
 
 .rule-card strong {
-  color: #22d3ee; /* Resalta las palabras clave en cian */
+  color: #22d3ee; 
 }
 
-/* Botón de inicio grande */
 .action-section {
   text-align: center;
-  margin-top: auto; /* Empuja el botón al fondo si hay espacio */
+  margin-top: auto; 
 }
 
 .btn-start {
@@ -344,34 +334,33 @@ body {
   box-shadow: 0 8px 25px rgba(59, 130, 246, 0.6);
 }
 
-/* Ajuste móvil unificado */
 @media (max-width: 600px) {
   body {
-    justify-content: flex-start; /* Alinea al inicio horizontal si es necesario */
-    align-items: flex-start; /* PEGA TODO ARRIBA */
-    padding: 10px; /* Espacio mínimo contra los bordes */
-    overflow-y: auto; /* Permite scroll si el contenido es largo */
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    padding: 10px; 
+    overflow-y: auto; 
   }
 
   .trivia-container {
     margin-top: 0;
     padding: 15px;
-    border-radius: 16px; /* Bordes más sutiles en móvil */
+    border-radius: 16px; 
   }
 
-  /* Pantalla de Inicio: Reglas en una sola columna */
+ 
   .rules-grid {
     grid-template-columns: 1fr;
     gap: 10px;
   }
 
-  /* Pantalla de Trivia: Botones y texto */
+
   .options-grid {
     grid-template-columns: 1fr;
   }
 
   .question-box {
-    padding: 25px 20px; /* Menos aire en la pregunta */
+    padding: 25px 20px; 
   }
 
   .question-box p {
@@ -383,4 +372,11 @@ body {
     margin-bottom: 5px;
     font-size: 0.95rem;
   }
+
+
+
 }
+
+   
+    
+
