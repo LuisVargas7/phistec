@@ -46,11 +46,9 @@
         </div>
 
     </div>
-    <!-- libreia trascripccion de ecuaciones !-->
     <script src="js/katex.min.js" defer></script>
     <script src="js/auto-render.min.js" defer></script>
     <script src="js/app.js"></script>
-
 </body>
 </html>
 

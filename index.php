@@ -14,7 +14,7 @@
 		</header>
 
 		<div class="welcome-box">
-			<h1>Formulas y despejes con valor numerico</h1> 
+			<h1>Fórmulas  y despejes con valor numérico</h1> 
 			<p>Bienvenido. Antes de iniciar el desafío, lee atentamente la dinámica del juego:</p>
 		</div>
 

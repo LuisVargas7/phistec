@@ -61,7 +61,6 @@ function mostrarPregunta(data) {
 
 function validarRespuesta(opcionSeleccionada, botonElemento) {
 
-    console.log(preguntaActual);
     // Bloquear otros clics
     const todosLosBotones = document.querySelectorAll('.option-btn');
     todosLosBotones.forEach(btn => btn.style.pointerEvents = 'none');
@@ -108,12 +107,12 @@ function marcarCorrectaEnPantalla() {
 }
 
 
-function transcipcionEcuaciones() {
-    renderMathInElement(document.body, {
-        delimiters: [
-            {left: '$$', right: '$$', display: true},  
-            {left: '$', right: '$', display: false}   
-        ],
-        throwOnError: false
-    });
+        function transcipcionEcuaciones() {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},  
+                    {left: '$', right: '$', display: false}   
+                ],
+                throwOnError: false
+            });
 }
